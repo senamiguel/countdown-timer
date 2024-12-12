@@ -1,0 +1,22 @@
+<div class="hero">
+    
+  <div class="container">
+    
+    <div class="clock">
+        <h1 id="title">{{nomeEvento}}</h1>
+      <div class="month" *ngIf="month">
+        <span id="mts">{{ month }}</span>
+        <span>:</span>
+      </div>
+      <div class="day" *ngIf="day">
+        <span id="dys">{{ day }}</span>
+        <span>:</span>
+      </div>
+      <span id="hrs">{{ hour }}</span>
+      <span>:</span>
+      <span id="mins">{{ minute }}</span>
+      <span>:</span>
+      <span id="sec">{{ second }}</span>
+    </div>
+  </div>
+</div>
