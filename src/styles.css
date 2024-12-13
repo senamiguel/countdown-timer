@@ -4,3 +4,13 @@
     font-family: 'Sometype Mono', sans-serif;
     box-sizing: border-box;
 }
+.input-container input[type="date"],
+.input-container input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}

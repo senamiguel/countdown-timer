@@ -1,9 +1,7 @@
 <div class="hero">
-    
   <div class="container">
-    
     <div class="clock">
-        <h1 id="title">{{nomeEvento}}</h1>
+      <h1 id="title" contenteditable="true" spellcheck="false">{{ nomeEvento }}</h1>
       <div class="month" *ngIf="month">
         <span id="mts">{{ month }}</span>
         <span>:</span>
@@ -17,6 +15,22 @@
       <span id="mins">{{ minute }}</span>
       <span>:</span>
       <span id="sec">{{ second }}</span>
+    </div>
+  </div>
+  <div class="picker">
+    <div class="picks">
+      <h1 (click)="onClick('Xmas')">Xmas</h1>
+      <h1 (click)="onClick('New Year')">New Year</h1>
+      <div  class="input-container" id="date-picker-container">
+        <input 
+          type="date"
+          id="date-checkin"
+          class="date-field"
+          name="date-from"
+          min="{{ addOneDay() | date : 'yyyy-MM-dd' }}"
+          (change)="onClick(date.value)"
+        #date/>
+      </div>
     </div>
   </div>
 </div>
